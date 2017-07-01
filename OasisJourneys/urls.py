@@ -13,9 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from django.contrib import admin
+import django.conf.urls
+import django.contrib
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    django.conf.urls.url(r'^', django.conf.urls.include('OasisMembers.urls')),
+    django.conf.urls.url(r'^admin/', django.contrib.admin.site.urls),
 ]
