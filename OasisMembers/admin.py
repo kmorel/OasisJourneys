@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.contrib import admin
+import django.contrib
+
+import models
 
 # Register your models here.
+
+django.contrib.admin.site.register(models.Technique)
+django.contrib.admin.site.register(models.Meeting)

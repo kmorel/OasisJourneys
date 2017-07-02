@@ -4,6 +4,11 @@ To create the SQLite database file that will serve the underlying data, run
 
   $ python manage.py migrate
 
+You may want to create an admin account to manage the data through the web.
+If so, run
+
+  $ python manage.py createsuperuser
+
 
 ## Development
 
