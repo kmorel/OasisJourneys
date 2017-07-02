@@ -1,10 +1,55 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from __future__ import print_function
 from six import python_2_unicode_compatible
 
 import django.db
 
 # Create your models here.
+
+
+@python_2_unicode_compatible
+class Member(django.db.models.Model):
+    ABILITIES = ( 'Feeling', 'Hearing', 'Knowing', 'Vision' )
+    ABILITIES_CHOICES = ( ( ABILITIES[0], ABILITIES[0] ),
+                          ( ABILITIES[1], ABILITIES[1] ),
+                          ( ABILITIES[2], ABILITIES[2] ),
+                          ( ABILITIES[3], ABILITIES[3] ) )
+    FirstName = django.db.models.CharField('First Name', max_length=100)
+    LastName = django.db.models.CharField('Last Name', max_length=100)
+    Email = django.db.models.EmailField(max_length=254)
+    Ability1 = django.db.models.CharField('Ability 1',
+                                          max_length=8,
+                                          choices=ABILITIES_CHOICES)
+    Ability2 = django.db.models.CharField('Ability 2',
+                                          max_length=8,
+                                          choices=ABILITIES_CHOICES)
+    Ability3 = django.db.models.CharField('Ability 3',
+                                          max_length=8,
+                                          choices=ABILITIES_CHOICES)
+    Ability4 = django.db.models.CharField('Ability 4',
+                                          max_length=8,
+                                          choices=ABILITIES_CHOICES)
+    Location = django.db.models.CharField(max_length=200)
+    IsLeader = django.db.models.BooleanField('Leader', default=False)
+    CourseContribution = django.db.models.TextField('Course Contribution')
+    IsCurrent = django.db.models.BooleanField('Current Member', default=True)
+    NumberOfGuides = django.db.models.IntegerField('Number of Guides', default=1)
+    LifePurpose = django.db.models.TextField('Life Purpose')
+    HasSpotlight = django.db.models.BooleanField('Spotlight', default=False)
+
+    def NameFirstLast(self):
+        return str(FirstName) + ' ' + str(LastName)
+
+    def NameLastFirst(self):
+        return str(LastName) + ', ' + str(FirstName)
+
+    def FullName(self):
+        return self.NameFirstLast()
+
+    def __str__(self):
+        return self.FullName()
+
 
 @python_2_unicode_compatible
 class Technique(django.db.models.Model):
@@ -20,10 +65,35 @@ class Meeting(django.db.models.Model):
     Time = django.db.models.DateTimeField()
     Technique = django.db.models.ForeignKey(Technique,
                                             on_delete=django.db.models.CASCADE)
-    #Coordinator =
-    #CoCoordinator =
-    Notes = django.db.models.CharField(max_length=65536)
+    Coordinator = django.db.models.ForeignKey(
+        Member,
+        related_name='MeetingsCoordinated',
+        on_delete=django.db.models.SET_NULL,
+        limit_choices_to={'Current Member': True},
+        null=True)
+    CoCoordinator = django.db.models.ForeignKey(
+        Member,
+        related_name='MeetingsCoCoordinated',
+        on_delete=django.db.models.SET_NULL,
+        limit_choices_to={'Current Member': True},
+        null=True)
+    Notes = django.db.models.TextField()
 
     def __str__(self):
-        return str(self.Time)
+        return str(self.Time) + ' - ' + str(self.Technique)
+
+
+@python_2_unicode_compatible
+class Attendee(django.db.models.Model):
+    Meeting = django.db.models.ForeignKey(
+        Meeting,
+        on_delete = django.db.models.CASCADE)
+    Member = django.db.models.ForeignKey(
+        Member,
+        on_delete = django.db.models.CASCADE,
+        limit_choices_to={'Current Member': True})
+    Notes = django.db.models.TextField()
+
+    def __str__(self):
+        return str(self.Member) + ' @ ' + str(self.Meeting)
 

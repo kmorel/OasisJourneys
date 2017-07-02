@@ -7,5 +7,7 @@ import models
 
 # Register your models here.
 
+django.contrib.admin.site.register(models.Member)
 django.contrib.admin.site.register(models.Technique)
 django.contrib.admin.site.register(models.Meeting)
+django.contrib.admin.site.register(models.Attendee)
