@@ -37,12 +37,13 @@ class Member(django.db.models.Model):
     NumberOfGuides = django.db.models.IntegerField('Number of Guides', default=1)
     LifePurpose = django.db.models.TextField('Life Purpose')
     HasSpotlight = django.db.models.BooleanField('Spotlight', default=False)
+    Notes = django.db.models.TextField(default='')
 
     def NameFirstLast(self):
-        return str(FirstName) + ' ' + str(LastName)
+        return str(self.FirstName) + ' ' + str(self.LastName)
 
     def NameLastFirst(self):
-        return str(LastName) + ', ' + str(FirstName)
+        return str(self.LastName) + ', ' + str(self.FirstName)
 
     def FullName(self):
         return self.NameFirstLast()
