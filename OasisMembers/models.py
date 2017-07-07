@@ -70,13 +70,13 @@ class Meeting(django.db.models.Model):
         Member,
         related_name='MeetingsCoordinated',
         on_delete=django.db.models.SET_NULL,
-        limit_choices_to={'Current Member': True},
+        limit_choices_to={'IsCurrent': True},
         null=True)
     CoCoordinator = django.db.models.ForeignKey(
         Member,
         related_name='MeetingsCoCoordinated',
         on_delete=django.db.models.SET_NULL,
-        limit_choices_to={'Current Member': True},
+        limit_choices_to={'IsCurrent': True},
         null=True)
     Notes = django.db.models.TextField()
 
@@ -92,7 +92,7 @@ class Attendee(django.db.models.Model):
     Member = django.db.models.ForeignKey(
         Member,
         on_delete = django.db.models.CASCADE,
-        limit_choices_to={'Current Member': True})
+        limit_choices_to={'IsCurrent': True})
     Notes = django.db.models.TextField()
 
     def __str__(self):

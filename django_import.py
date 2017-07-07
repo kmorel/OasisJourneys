@@ -5,6 +5,8 @@
 
 from __future__ import print_function
 
+import re
+
 import django
 django.setup()
 
@@ -51,3 +53,21 @@ with open('/Users/joann/Dropbox/Oasis Journeys DataBase Tables/Members_2017-Jun-
         dbEntry.HasSpotlight = boolCell(row[14])
         dbEntry.save()
         members[row[0]] = dbEntry
+
+meetings = {}
+with open('/Users/joann/Dropbox/Oasis Journeys DataBase Tables/Meetings_2017-Jun-30_0333.csv') as fd:
+    reader = csv.reader(fd)
+    reader.next()   # Skip header
+    for row in reader:
+        date = re.sub('([0-9]+)/([0-9]+)/([0-9]+)', '20\\3-\\1-\\2', row[1])
+        date = date + "-06:00"
+        dbEntry, _ = models.Meeting.objects.get_or_create(
+            Time=date, Technique=techniques[row[0]])
+        if row[2] != '':
+            dbEntry.Coordinator = members[row[2]]
+        if row[3] != '':
+            dbEntry.CoCoordinator = members[row[3]]
+        dbEntry.Notes = row[4]
+        dbEntry.save()
+        meetings[row[5]] = dbEntry
+
