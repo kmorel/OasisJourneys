@@ -71,3 +71,18 @@ with open('/Users/joann/Dropbox/Oasis Journeys DataBase Tables/Meetings_2017-Jun
         dbEntry.save()
         meetings[row[5]] = dbEntry
 
+with open('/Users/joann/Dropbox/Oasis Journeys DataBase Tables/Attendees_2017-Jun-30_0332.csv') as fd:
+    reader = csv.reader(fd)
+    reader.next()   # Skip header
+    for row in reader:
+        if not row[0] in meetings.keys():
+            print('No meeting ', row[0], '. Skipping')
+            continue
+        if not row[1] in members.keys():
+            print('No member ', row[1], 'for meeting', row[0], '. Skipping')
+            continue
+        dbEntry, _ = models.Attendee.objects.get_or_create(
+            Meeting=meetings[row[0]],
+            Member=members[row[1]])
+        dbEntry.Notes = row[2]
+        dbEntry.save()
