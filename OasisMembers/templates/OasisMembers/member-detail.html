@@ -1,0 +1,57 @@
+<h1>{{ member.FullName }}</h1>
+
+{% if member.IsCurrent %}
+Current Member
+{% else %}
+Not a current member
+{% endif %}
+{% if member.IsLeader %}
+<br/>
+A Course Leader
+{% endif %}
+{% if member.HasSpotlight %}
+<br/>
+Has a spotlight
+{% endif %}
+
+<p>
+  <strong>Abilities:</strong>
+  {{ member.Ability1 }}, {{ member.Ability2 }},
+  {{ member.Ability3 }}, {{ member.Ability4 }}
+  <br/>
+  <strong>Number of Guides:</strong> {{ member.NumberOfGuides }}
+  <br/>
+  <strong>Life Purpose:</strong> {{ member.LifePurpose }}
+  <br>
+  <strong>Course Contribution:</strong> {{ member.CourseContribution }}
+</p>
+
+<p>
+  <strong>Email:</strong>
+  {% if member.email %}
+  <a href="mailto:{{ member.email }}">{{ member.email }}</a>
+  {% endif %}
+  <br/>
+  <strong>Location:</strong> {{ member.Location }}
+  <br/>
+</p>
+
+<p>
+  <strong>Notes:</strong> {{ member.Notes }}
+</p>
+
+<p>
+  <strong>Meetings Coordinated:</strong><br/>
+  {% for meeting in member.MeetingsCoordinated.filter %}
+  <a href="../../meeting/{{ meeting.id }}">{{ meeting }}</a><br/>
+  {% endfor %}
+</p>
+
+<p>
+  <strong>Meetings Co-Coordinated:</strong><br/>
+  {% for meeting in member.MeetingsCoCoordinated.filter %}
+  <a href="../../meeting/{{ meeting.id }}">{{ meeting }}</a><br/>
+  {% endfor %}
+</p>
+
+TODO: List of meetings attendeed

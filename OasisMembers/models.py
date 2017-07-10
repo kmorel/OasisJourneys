@@ -52,6 +52,11 @@ class Member(django.db.models.Model):
         return self.FullName()
 
 
+# TODO: Make this a static method of Member (?)
+def GetOrderedMemberList():
+    return Member.objects.order_by('FirstName')
+
+
 @python_2_unicode_compatible
 class Technique(django.db.models.Model):
     Name = django.db.models.CharField(max_length=100)
