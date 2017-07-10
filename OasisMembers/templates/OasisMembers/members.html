@@ -1,7 +1,7 @@
 <table>
   {% for member in member_list %}
   <tr>
-    <td><a href="/member/{{ member.id }}/">{{ member }}</a></td>
+    <td><a href="{% url 'OasisMembers:member' member.id %}">{{ member }}</a></td>
   </tr>
   {% endfor %}
 </table>

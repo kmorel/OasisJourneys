@@ -1,6 +1,7 @@
 import django.conf.urls
 import views
 
+app_name = 'OasisMembers'
 urlpatterns = [
     django.conf.urls.url(r'^$', views.index, name='index'),
     django.conf.urls.url(r'^members/$', views.members, name='members'),
