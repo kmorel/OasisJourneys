@@ -5,9 +5,19 @@ import django.contrib
 
 import models
 
-# Register your models here.
+class AttendeeInline(django.contrib.admin.StackedInline):
+    model = models.Attendee
+
+class MeetingAdmin(django.contrib.admin.ModelAdmin):
+    fields = [
+        'Time',
+        'Technique',
+        'Coordinator',
+        'CoCoordinator',
+        'Notes',
+    ]
+    inlines = [AttendeeInline]
 
 django.contrib.admin.site.register(models.Member)
 django.contrib.admin.site.register(models.Technique)
-django.contrib.admin.site.register(models.Meeting)
-django.contrib.admin.site.register(models.Attendee)
+django.contrib.admin.site.register(models.Meeting, MeetingAdmin)
