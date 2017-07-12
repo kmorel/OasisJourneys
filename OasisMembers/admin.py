@@ -17,6 +17,7 @@ class MeetingAdmin(django.contrib.admin.ModelAdmin):
         'Notes',
     ]
     inlines = [AttendeeInline]
+    list_filter = ['Time', 'Technique']
 
 django.contrib.admin.site.register(models.Member)
 django.contrib.admin.site.register(models.Technique)
