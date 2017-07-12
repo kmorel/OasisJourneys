@@ -1,3 +1,7 @@
+<div style="position:absolute; right:20px;">
+  <a href="{% url 'OasisMembers:members' %}">Back to members list</a>
+</div>
+
 <h1>{{ member.FullName }}</h1>
 
 {% if member.IsCurrent %}
@@ -38,6 +42,8 @@ Has a spotlight
 
 <p>
   <strong>Notes:</strong> {{ member.Notes }}
+  <br/>
+  <a href="{% url 'OasisMembers:member-notes-edit' member.id %}">Edit Notes</a>
 </p>
 
 TODO: Change href to url macro commands

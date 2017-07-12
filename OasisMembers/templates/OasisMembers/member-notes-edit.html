@@ -1,0 +1,10 @@
+<h1>{{ member.FullName }}</h1>
+
+<form action="{% url 'OasisMembers:member-notes-submit' member.id %}"
+      id="notesform"
+      method="post">
+  {% csrf_token %}
+  <textarea name="notes" form="notesform">{{ member.Notes }}</textarea>
+  <br/>
+  <input type="submit" value="Update Notes" />
+</form>
