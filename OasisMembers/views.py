@@ -10,7 +10,7 @@ import django.urls
 import models
 
 def index(request):
-    return django.http.HttpResponse("Hello, world.")
+    return django.shortcuts.render(request, 'OasisMembers/index.html', {})
 
 def members(request):
     member_list = models.GetOrderedMemberList()
