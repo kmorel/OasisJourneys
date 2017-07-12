@@ -22,3 +22,5 @@ class MeetingAdmin(django.contrib.admin.ModelAdmin):
 django.contrib.admin.site.register(models.Member)
 django.contrib.admin.site.register(models.Technique)
 django.contrib.admin.site.register(models.Meeting, MeetingAdmin)
+
+django.contrib.admin.site.site_header = 'Oasis Journeys Members Admin'
