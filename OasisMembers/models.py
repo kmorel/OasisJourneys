@@ -17,27 +17,31 @@ class Member(django.db.models.Model):
                           ( ABILITIES[3], ABILITIES[3] ) )
     FirstName = django.db.models.CharField('First Name', max_length=100)
     LastName = django.db.models.CharField('Last Name', max_length=100)
-    Email = django.db.models.EmailField(max_length=254)
+    Email = django.db.models.EmailField(max_length=254, blank=True)
     Ability1 = django.db.models.CharField('Ability 1',
                                           max_length=8,
-                                          choices=ABILITIES_CHOICES)
+                                          choices=ABILITIES_CHOICES,
+                                          blank=True)
     Ability2 = django.db.models.CharField('Ability 2',
                                           max_length=8,
-                                          choices=ABILITIES_CHOICES)
+                                          choices=ABILITIES_CHOICES,
+                                          blank=True)
     Ability3 = django.db.models.CharField('Ability 3',
                                           max_length=8,
-                                          choices=ABILITIES_CHOICES)
+                                          choices=ABILITIES_CHOICES,
+                                          blank=True)
     Ability4 = django.db.models.CharField('Ability 4',
                                           max_length=8,
-                                          choices=ABILITIES_CHOICES)
-    Location = django.db.models.CharField(max_length=200)
+                                          choices=ABILITIES_CHOICES,
+                                          blank=True)
+    Location = django.db.models.CharField(max_length=200, blank=True)
     IsLeader = django.db.models.BooleanField('Leader', default=False)
-    CourseContribution = django.db.models.TextField('Course Contribution')
+    CourseContribution = django.db.models.TextField('Course Contribution', blank=True)
     IsCurrent = django.db.models.BooleanField('Current Member', default=True)
     NumberOfGuides = django.db.models.IntegerField('Number of Guides', default=1)
-    LifePurpose = django.db.models.TextField('Life Purpose')
+    LifePurpose = django.db.models.TextField('Life Purpose', blank=True)
     HasSpotlight = django.db.models.BooleanField('Spotlight', default=False)
-    Notes = django.db.models.TextField(default='')
+    Notes = django.db.models.TextField(default='', blank=True)
 
     def NameFirstLast(self):
         return str(self.FirstName) + ' ' + str(self.LastName)
