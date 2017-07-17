@@ -1,3 +1,7 @@
+{% extends 'OasisMembers/base-generic.html' %}
+
+{% block content %}
+
 <h1>{{ member.FullName }}</h1>
 
 <form action="{% url 'OasisMembers:member-notes-submit' member.id %}"
@@ -8,3 +12,6 @@
   <br/>
   <input type="submit" value="Update Notes" />
 </form>
+
+{% endblock %}
+

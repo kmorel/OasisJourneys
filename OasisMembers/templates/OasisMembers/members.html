@@ -1,3 +1,7 @@
+{% extends 'OasisMembers/base-generic.html' %}
+
+{% block content %}
+
 <table>
   {% for member in member_list %}
   <tr>
@@ -5,3 +9,6 @@
   </tr>
   {% endfor %}
 </table>
+
+{% endblock %}
+
