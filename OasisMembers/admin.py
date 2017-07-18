@@ -16,6 +16,7 @@ class MeetingAdmin(django.contrib.admin.ModelAdmin):
         'CoCoordinator',
         'Notes',
     ]
+    date_hierarchy = 'Time'
     inlines = [AttendeeInline]
     list_filter = ['Time', 'Technique']
 

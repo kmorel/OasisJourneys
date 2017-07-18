@@ -55,6 +55,9 @@ class Member(django.db.models.Model):
     def __str__(self):
         return self.FullName()
 
+    class Meta:
+        ordering = ['FirstName', 'LastName']
+
 
 # TODO: Make this a static method of Member (?)
 def GetOrderedMemberList():
