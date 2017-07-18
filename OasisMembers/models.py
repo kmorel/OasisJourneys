@@ -73,21 +73,24 @@ class Technique(django.db.models.Model):
 @python_2_unicode_compatible
 class Meeting(django.db.models.Model):
     Time = django.db.models.DateTimeField()
-    Technique = django.db.models.ForeignKey(Technique,
-                                            on_delete=django.db.models.CASCADE)
+    Technique = django.db.models.ForeignKey(
+        Technique,
+        on_delete=django.db.models.CASCADE)
     Coordinator = django.db.models.ForeignKey(
         Member,
         related_name='MeetingsCoordinated',
         on_delete=django.db.models.SET_NULL,
         limit_choices_to={'IsCurrent': True},
-        null=True)
+        null=True,
+        blank=True)
     CoCoordinator = django.db.models.ForeignKey(
         Member,
         related_name='MeetingsCoCoordinated',
         on_delete=django.db.models.SET_NULL,
         limit_choices_to={'IsCurrent': True},
-        null=True)
-    Notes = django.db.models.TextField()
+        null=True,
+        blank=True)
+    Notes = django.db.models.TextField(blank=True)
 
     def __str__(self):
         return str(self.Time) + ' - ' + str(self.Technique)
@@ -102,7 +105,7 @@ class Attendee(django.db.models.Model):
         Member,
         on_delete = django.db.models.CASCADE,
         limit_choices_to={'IsCurrent': True})
-    Notes = django.db.models.TextField()
+    Notes = django.db.models.TextField(blank=True)
 
     def __str__(self):
         return str(self.Member) + ' @ ' + str(self.Meeting)
