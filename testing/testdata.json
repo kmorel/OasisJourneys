@@ -1,0 +1,1093 @@
+[
+{
+  "model": "OasisMembers.member",
+  "pk": 1,
+  "fields": {
+    "FirstName": "Sylvia",
+    "LastName": "Browne",
+    "Email": "sylvia@sylviabrowne.com",
+    "Ability1": "Feeling",
+    "Ability2": "Hearing",
+    "Ability3": "Knowing",
+    "Ability4": "Vision",
+    "Location": "Kansas City, MO",
+    "IsLeader": true,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": "Couldn't predict 9/11.\r\nBut called the Tom Cruise/Nichole Kidman split."
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 2,
+  "fields": {
+    "FirstName": "Linda",
+    "LastName": "Jamison",
+    "Email": "",
+    "Ability1": "Hearing",
+    "Ability2": "Knowing",
+    "Ability3": "Vision",
+    "Ability4": "Feeling",
+    "Location": "West Chester, PN",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 3,
+  "fields": {
+    "FirstName": "Terry",
+    "LastName": "Jamison",
+    "Email": "",
+    "Ability1": "Knowing",
+    "Ability2": "Vision",
+    "Ability3": "Feeling",
+    "Ability4": "Hearing",
+    "Location": "West Chester, PN",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": "Sister of Linda Jamison"
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 4,
+  "fields": {
+    "FirstName": "Edgar",
+    "LastName": "Cayce",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 3,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 5,
+  "fields": {
+    "FirstName": "Uri",
+    "LastName": "Geller",
+    "Email": "",
+    "Ability1": "Feeling",
+    "Ability2": "Vision",
+    "Ability3": "Hearing",
+    "Ability4": "Knowing",
+    "Location": "Israel",
+    "IsLeader": false,
+    "CourseContribution": "Spoon Bending",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 6,
+  "fields": {
+    "FirstName": "George",
+    "LastName": "King",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 7,
+  "fields": {
+    "FirstName": "Danielle",
+    "LastName": "Egnew",
+    "Email": "egnew@mailservice.com",
+    "Ability1": "Hearing",
+    "Ability2": "Feeling",
+    "Ability3": "Vision",
+    "Ability4": "Knowing",
+    "Location": "Billings, MT",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "Singing, acting",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 8,
+  "fields": {
+    "FirstName": "Tomas",
+    "LastName": "Lethbridge",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 9,
+  "fields": {
+    "FirstName": "John",
+    "LastName": "Edward",
+    "Email": "john@johnedward.com",
+    "Ability1": "Hearing",
+    "Ability2": "Feeling",
+    "Ability3": "Knowing",
+    "Ability4": "Vision",
+    "Location": "Glen Cove, NY",
+    "IsLeader": true,
+    "CourseContribution": "What If God Were the Sun?\r\nCrossing Over with John Edward\r\nJohn Edward Cross Country",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 10,
+  "fields": {
+    "FirstName": "Gary",
+    "LastName": "Spivey",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 11,
+  "fields": {
+    "FirstName": "Colin",
+    "LastName": "Fry",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "England",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 4,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 12,
+  "fields": {
+    "FirstName": "Paul",
+    "LastName": "Draper",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 13,
+  "fields": {
+    "FirstName": "Mark",
+    "LastName": "Edward",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 14,
+  "fields": {
+    "FirstName": "Luke",
+    "LastName": "Jarmay",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "United Kingdom",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 15,
+  "fields": {
+    "FirstName": "Simon",
+    "LastName": "Turnbull",
+    "Email": "",
+    "Ability1": "Vision",
+    "Ability2": "Knowing",
+    "Ability3": "Hearing",
+    "Ability4": "Feeling",
+    "Location": "Austrailia",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 3,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 16,
+  "fields": {
+    "FirstName": "Derek",
+    "LastName": "Acorah",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 17,
+  "fields": {
+    "FirstName": "Daniel",
+    "LastName": "Home",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 18,
+  "fields": {
+    "FirstName": "James",
+    "LastName": "Hydrick",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 19,
+  "fields": {
+    "FirstName": "Maria",
+    "LastName": "Papapetros",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "Greece",
+    "IsLeader": true,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.member",
+  "pk": 20,
+  "fields": {
+    "FirstName": "Thomas",
+    "LastName": "Williams",
+    "Email": "",
+    "Ability1": "",
+    "Ability2": "",
+    "Ability3": "",
+    "Ability4": "",
+    "Location": "",
+    "IsLeader": false,
+    "CourseContribution": "",
+    "IsCurrent": true,
+    "NumberOfGuides": 1,
+    "LifePurpose": "",
+    "HasSpotlight": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 1,
+  "fields": {
+    "Name": "Awakening"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 2,
+  "fields": {
+    "Name": "Healing"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 3,
+  "fields": {
+    "Name": "Gift to Share"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 4,
+  "fields": {
+    "Name": "Organizing"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 5,
+  "fields": {
+    "Name": "Testing Waters"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 6,
+  "fields": {
+    "Name": "Confidence"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 7,
+  "fields": {
+    "Name": "Big World"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 8,
+  "fields": {
+    "Name": "Focusing Brand"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 9,
+  "fields": {
+    "Name": "Alive with Possibilities"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 10,
+  "fields": {
+    "Name": "Preparing for Dream"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 11,
+  "fields": {
+    "Name": "Open House"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 12,
+  "fields": {
+    "Name": "Angels"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 13,
+  "fields": {
+    "Name": "Golden Vision"
+  }
+},
+{
+  "model": "OasisMembers.technique",
+  "pk": 14,
+  "fields": {
+    "Name": "Introduction"
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 1,
+  "fields": {
+    "Time": "2017-07-01T04:58:33Z",
+    "Technique": 1,
+    "Coordinator": 1,
+    "CoCoordinator": 2,
+    "Notes": "\"What is going on?\" asked Sylvia.\r\n\"I don't know. Nobody does,\" responded Linda."
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 2,
+  "fields": {
+    "Time": "2017-07-02T05:05:30Z",
+    "Technique": 2,
+    "Coordinator": null,
+    "CoCoordinator": null,
+    "Notes": "Who is running this shindig?"
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 3,
+  "fields": {
+    "Time": "2017-07-03T05:05:57Z",
+    "Technique": 3,
+    "Coordinator": 17,
+    "CoCoordinator": 18,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 4,
+  "fields": {
+    "Time": "2017-07-04T05:06:52Z",
+    "Technique": 4,
+    "Coordinator": 12,
+    "CoCoordinator": 4,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 5,
+  "fields": {
+    "Time": "2017-07-05T05:07:15Z",
+    "Technique": 5,
+    "Coordinator": 13,
+    "CoCoordinator": 20,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 6,
+  "fields": {
+    "Time": "2017-07-06T05:33:37Z",
+    "Technique": 5,
+    "Coordinator": 20,
+    "CoCoordinator": 17,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 7,
+  "fields": {
+    "Time": "2017-07-07T05:34:21Z",
+    "Technique": 6,
+    "Coordinator": 14,
+    "CoCoordinator": 16,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 8,
+  "fields": {
+    "Time": "2017-07-09T05:34:45Z",
+    "Technique": 7,
+    "Coordinator": 2,
+    "CoCoordinator": 3,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 9,
+  "fields": {
+    "Time": "2017-07-10T05:37:20Z",
+    "Technique": 8,
+    "Coordinator": 19,
+    "CoCoordinator": 3,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 10,
+  "fields": {
+    "Time": "2017-07-11T05:37:48Z",
+    "Technique": 9,
+    "Coordinator": 13,
+    "CoCoordinator": 16,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 11,
+  "fields": {
+    "Time": "2017-07-12T05:38:22Z",
+    "Technique": 10,
+    "Coordinator": 3,
+    "CoCoordinator": 6,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.meeting",
+  "pk": 12,
+  "fields": {
+    "Time": "2017-07-13T05:38:53Z",
+    "Technique": 11,
+    "Coordinator": 11,
+    "CoCoordinator": 17,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 1,
+  "fields": {
+    "Meeting": 1,
+    "Member": 3,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 2,
+  "fields": {
+    "Meeting": 1,
+    "Member": 4,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 3,
+  "fields": {
+    "Meeting": 1,
+    "Member": 5,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 4,
+  "fields": {
+    "Meeting": 1,
+    "Member": 6,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 5,
+  "fields": {
+    "Meeting": 2,
+    "Member": 4,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 6,
+  "fields": {
+    "Meeting": 2,
+    "Member": 10,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 7,
+  "fields": {
+    "Meeting": 3,
+    "Member": 4,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 8,
+  "fields": {
+    "Meeting": 3,
+    "Member": 1,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 9,
+  "fields": {
+    "Meeting": 3,
+    "Member": 19,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 10,
+  "fields": {
+    "Meeting": 3,
+    "Member": 11,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 11,
+  "fields": {
+    "Meeting": 3,
+    "Member": 9,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 12,
+  "fields": {
+    "Meeting": 3,
+    "Member": 18,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 13,
+  "fields": {
+    "Meeting": 4,
+    "Member": 9,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 14,
+  "fields": {
+    "Meeting": 4,
+    "Member": 14,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 15,
+  "fields": {
+    "Meeting": 4,
+    "Member": 18,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 16,
+  "fields": {
+    "Meeting": 5,
+    "Member": 8,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 17,
+  "fields": {
+    "Meeting": 5,
+    "Member": 3,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 18,
+  "fields": {
+    "Meeting": 5,
+    "Member": 2,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 19,
+  "fields": {
+    "Meeting": 5,
+    "Member": 14,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 20,
+  "fields": {
+    "Meeting": 5,
+    "Member": 17,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 21,
+  "fields": {
+    "Meeting": 6,
+    "Member": 18,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 22,
+  "fields": {
+    "Meeting": 6,
+    "Member": 11,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 23,
+  "fields": {
+    "Meeting": 6,
+    "Member": 9,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 24,
+  "fields": {
+    "Meeting": 6,
+    "Member": 5,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 25,
+  "fields": {
+    "Meeting": 7,
+    "Member": 6,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 26,
+  "fields": {
+    "Meeting": 7,
+    "Member": 7,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 27,
+  "fields": {
+    "Meeting": 7,
+    "Member": 19,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 28,
+  "fields": {
+    "Meeting": 8,
+    "Member": 10,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 29,
+  "fields": {
+    "Meeting": 8,
+    "Member": 16,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 30,
+  "fields": {
+    "Meeting": 8,
+    "Member": 17,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 31,
+  "fields": {
+    "Meeting": 9,
+    "Member": 5,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 32,
+  "fields": {
+    "Meeting": 9,
+    "Member": 1,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 33,
+  "fields": {
+    "Meeting": 9,
+    "Member": 9,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 34,
+  "fields": {
+    "Meeting": 10,
+    "Member": 12,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 35,
+  "fields": {
+    "Meeting": 10,
+    "Member": 4,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 36,
+  "fields": {
+    "Meeting": 10,
+    "Member": 20,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 37,
+  "fields": {
+    "Meeting": 10,
+    "Member": 3,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 38,
+  "fields": {
+    "Meeting": 11,
+    "Member": 15,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 39,
+  "fields": {
+    "Meeting": 11,
+    "Member": 1,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 40,
+  "fields": {
+    "Meeting": 11,
+    "Member": 18,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 41,
+  "fields": {
+    "Meeting": 12,
+    "Member": 7,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 42,
+  "fields": {
+    "Meeting": 12,
+    "Member": 16,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 43,
+  "fields": {
+    "Meeting": 12,
+    "Member": 4,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 44,
+  "fields": {
+    "Meeting": 12,
+    "Member": 10,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 45,
+  "fields": {
+    "Meeting": 12,
+    "Member": 6,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 46,
+  "fields": {
+    "Meeting": 12,
+    "Member": 18,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 47,
+  "fields": {
+    "Meeting": 12,
+    "Member": 9,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 48,
+  "fields": {
+    "Meeting": 12,
+    "Member": 2,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 49,
+  "fields": {
+    "Meeting": 12,
+    "Member": 14,
+    "Notes": ""
+  }
+}
+]
