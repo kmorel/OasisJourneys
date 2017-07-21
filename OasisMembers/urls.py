@@ -14,4 +14,8 @@ urlpatterns = [
     django.conf.urls.url(r'^member-notes-submit/(?P<member_id>[0-9]+)/$',
                          views.member_notes_submit,
                          name='member-notes-submit'),
+    django.conf.urls.url(r'^meetings/$', views.meetings, name='meetings'),
+    django.conf.urls.url(r'^meeting/(?P<meeting_id>[0-9]+)$',
+                         views.meeting,
+                         name='meeting'),
 ]

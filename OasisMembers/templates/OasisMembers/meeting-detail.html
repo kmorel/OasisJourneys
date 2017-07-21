@@ -1,0 +1,29 @@
+{% extends 'OasisMembers/base-generic.html' %}
+
+{% block title %}Oasis Meeting @ {{ meeting.Time }}{% endblock %}
+
+{% block content %}
+
+<div style="position:absolute; right:20px;">
+  <a href="{% url 'OasisMembers:meetings' %}">Back to meetings list</a>
+</div>
+
+<h1>Meeting @ {{ meeting.Time }}</h1>
+
+<p>
+<strong>Technique:</strong> {{ meeting.Technique }} <br/>
+<strong>Coordinator:</strong>
+<a href="{% url 'OasisMembers:member' meeting.Coordinator.id %}">{{ meeting.Coordinator }}</a><br/>
+<strong>Co-Coordinator:</strong>
+<a href="{% url 'OasisMembers:member' meeting.CoCoordinator.id %}">{{ meeting.CoCoordinator }}</a><br/>
+</p>
+
+<p>
+<strong>Attendees:</strong><br/>
+{% for attendee in meeting.attendee_set.filter %}
+<a href="{% url 'OasisMembers:member' attendee.Member.id %}">{{ attendee.Member }}</a><br/>
+{% endfor %}
+</p>
+
+{% endblock %}
+

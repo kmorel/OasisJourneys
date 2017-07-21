@@ -38,3 +38,16 @@ def member_notes_submit(request, member_id):
     return django.http.HttpResponseRedirect(
         django.urls.reverse('OasisMembers:member',
                             args=(member_id)))
+
+def meetings(request):
+    meetings = models.Meeting.objects.all()
+    return django.shortcuts.render(request,
+                                   'OasisMembers/meetings.html',
+                                   {'meeting_list':meetings})
+
+def meeting(request, meeting_id):
+    meeting = django.shortcuts.get_object_or_404(models.Meeting, pk=meeting_id)
+    return django.shortcuts.render(request,
+                                   'OasisMembers/meeting-detail.html',
+                                   {'meeting':meeting})
+
