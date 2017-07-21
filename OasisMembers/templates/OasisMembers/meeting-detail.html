@@ -13,9 +13,17 @@
 <p>
 <strong>Technique:</strong> {{ meeting.Technique }} <br/>
 <strong>Coordinator:</strong>
+{% if meeting.Coordinator %}
 <a href="{% url 'OasisMembers:member' meeting.Coordinator.id %}">{{ meeting.Coordinator }}</a><br/>
+{% else %}
+<em>no coordinator</em> <br/>
+{% endif %}
 <strong>Co-Coordinator:</strong>
+{% if meeting.CoCoordinator %}
 <a href="{% url 'OasisMembers:member' meeting.CoCoordinator.id %}">{{ meeting.CoCoordinator }}</a><br/>
+{% else %}
+<em>no co-coordinator</em> <br/>
+{% endif %}
 </p>
 
 <p>

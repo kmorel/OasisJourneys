@@ -71,3 +71,9 @@ class MeetingViewTests(django.test.TestCase):
         self.assertContains(response, 'Meeting @ July 5, 2017')
         self.assertContains(response, '<title>Oasis Meeting @')
 
+    def test_no_coordinators(self):
+        """Test a view that has no coordinator or cocoordinator."""
+        response = self.client.get(django.urls.reverse(
+            'OasisMembers:meeting',
+            kwargs={'meeting_id':2}))
+
