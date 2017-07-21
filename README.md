@@ -22,14 +22,14 @@ provided json data.
 
 ```
 python manage.py migrate
-python manage.py loaddata testing/testdata.json
+python manage.py loaddata OasisMembers/fixtures/testdata.json
 ```
 
 If you make some changes to the data that you want to capture (and check
 into the repository) use the dumpdata command.
 
 ```
-python manage.py dumpdata OasisMembers --indent 2 > testing/testdata.json
+python manage.py dumpdata OasisMembers --indent 2 > OasisMembers/fixtures/testdata.json
 ```
 
 To run a test development server, execute this in the top directory.
@@ -50,3 +50,15 @@ which is
 ```
 python manage.py migrate
 ```
+
+
+## Testing
+
+To run the testing suite, use the manage testing function.
+
+```
+python manage.py test OasisMembers
+```
+
+To add more tests, edit the `OasisMembers/tests.py` file.
+
