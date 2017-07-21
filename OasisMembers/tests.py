@@ -44,6 +44,12 @@ class MemberViewTests(django.test.TestCase):
         self.assertContains(response,
                             '<title>Oasis Member Sylvia Browne</title>',
                             html=True)
+        # Check Coordinated meeting
+        self.assertContains(response, '2017-07-01 04:58:33+00:00 - Awakening')
+        # Check Co-Coordinated meeting
+        self.assertContains(response, '2017-07-13 05:38:53+00:00 - Open House')
+        # Check attendeed meeting
+        self.assertContains(response, '2017-07-03 05:05:57+00:00 - Gift to Share')
 
 class MeetingsViewTests(django.test.TestCase):
     fixtures = [ 'testdata.json' ]
@@ -70,6 +76,15 @@ class MeetingViewTests(django.test.TestCase):
             kwargs={'meeting_id':6}))
         self.assertContains(response, 'Meeting @ July 5, 2017')
         self.assertContains(response, '<title>Oasis Meeting @')
+        # Coordinator should be there
+        self.assertContains(response, 'Thomas Williams')
+        # Co-Coordinator should be there
+        self.assertContains(response, 'Daniel Home')
+        # Attendees should be there
+        self.assertContains(response, 'James Hydrick')
+        self.assertContains(response, 'Colin Fry')
+        self.assertContains(response, 'John Edward')
+        self.assertContains(response, 'Uri Geller')
 
     def test_no_coordinators(self):
         """Test a view that has no coordinator or cocoordinator."""

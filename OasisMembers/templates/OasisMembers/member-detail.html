@@ -52,8 +52,6 @@ Has a spotlight
   <a href="{% url 'OasisMembers:member-notes-edit' member.id %}">Edit Notes</a>
 </p>
 
-TODO: Change href to url macro commands
-
 <p>
   <strong>Meetings Coordinated:</strong><br/>
   {% for meeting in member.MeetingsCoordinated.filter %}
@@ -68,7 +66,12 @@ TODO: Change href to url macro commands
   {% endfor %}
 </p>
 
-TODO: List of meetings attendeed
+<p>
+  <strong>Meetings Attendeed:</strong><br/>
+  {% for attend_entry in member.attendee_set.filter %}
+  <a href="{% url 'OasisMembers:meeting' attend_entry.Meeting.id %}">{{ attend_entry.Meeting }}</a><br/>
+  {% endfor %}
+</p>
 
 {% endblock %}
 
