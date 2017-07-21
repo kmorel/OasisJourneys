@@ -13,7 +13,7 @@ def index(request):
     return django.shortcuts.render(request, 'OasisMembers/index.html', {})
 
 def members(request):
-    member_list = models.GetOrderedMemberList()
+    member_list = models.Member.objects.all()
     context = {
         'member_list':member_list,
     }
