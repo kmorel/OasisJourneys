@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from __future__ import print_function
 
 import django.test
 import django.urls
@@ -10,6 +11,8 @@ import django.utils
 import models
 
 class MemberModelTests(django.test.TestCase):
+    fixtures = [ 'testdata.json' ]
+
     def test_full_name_methods(self):
         """Test that NameFirstLast, NameLastFirst, and FullName methods
 return names as expected.
@@ -18,6 +21,20 @@ return names as expected.
         self.assertEqual(newMember.NameFirstLast(), 'John Doe')
         self.assertEqual(newMember.NameLastFirst(), 'Doe, John')
         self.assertEqual(newMember.FullName(), 'John Doe')
+
+    def test_attendance_per_technique(self):
+        """Test that the AttendancePerTechnique method behaves as expected."""
+        member = models.Member.objects.get(pk=1) # Sylvia Brown
+        techniqueAttendance = member.AttendancePerTechnique()
+        self.assertEqual(techniqueAttendance.count(), 4)
+        self.assertEqual(
+            techniqueAttendance.get(Name='Gift to Share').NumMeetings, 1)
+        self.assertEqual(
+            techniqueAttendance.get(Name='Testing Waters').NumMeetings, 2)
+        self.assertEqual(
+            techniqueAttendance.get(Name='Focusing Brand').NumMeetings, 1)
+        self.assertEqual(
+            techniqueAttendance.get(Name='Preparing for Dream').NumMeetings, 1)
 
 # Views testing classes
 

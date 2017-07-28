@@ -1089,5 +1089,23 @@
     "Member": 14,
     "Notes": ""
   }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 50,
+  "fields": {
+    "Meeting": 6,
+    "Member": 1,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 51,
+  "fields": {
+    "Meeting": 5,
+    "Member": 1,
+    "Notes": ""
+  }
 }
 ]

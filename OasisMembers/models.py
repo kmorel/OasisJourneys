@@ -58,6 +58,17 @@ class Member(django.db.models.Model):
     class Meta:
         ordering = ['FirstName', 'LastName']
 
+    def AttendancePerTechnique(self):
+        """Returns a django.db.models.QuerySet containing all Techniques for
+meetings the given member has attended. Each Technique in the QuerySet
+is further annotated with a field named NumMeetings that gives a
+count of how many meetings of that type were attended."""
+        meetingsAttended = Technique.objects.filter(
+            meeting__attendee__Member=self)
+        meetingCount = meetingsAttended.annotate(
+            NumMeetings=django.db.models.Count('meeting'))
+        return meetingCount
+
 
 @python_2_unicode_compatible
 class Technique(django.db.models.Model):
