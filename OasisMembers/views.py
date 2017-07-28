@@ -21,9 +21,16 @@ def members(request):
 
 def member(request, member_id):
     member = django.shortcuts.get_object_or_404(models.Member, pk=member_id)
-    return django.shortcuts.render(request,
-                                   'OasisMembers/member-detail.html',
-                                   {'member':member})
+    techniquesAttended = member.AttendancePerTechnique()
+    techniquesNotAttended = \
+        models.Technique.objects.exclude(
+            Name=techniquesAttended.values_list('Name'))
+    return django.shortcuts.render(
+        request,
+        'OasisMembers/member-detail.html',
+        {'member':member,
+         'techniquesAttended':techniquesAttended,
+         'techniquesNotAttended':techniquesNotAttended})
 
 def member_notes_edit(request, member_id):
     member = django.shortcuts.get_object_or_404(models.Member, pk=member_id)

@@ -67,10 +67,24 @@ Has a spotlight
 </p>
 
 <p>
-  <strong>Meetings Attendeed:</strong><br/>
-  {% for attend_entry in member.attendee_set.filter %}
-  <a href="{% url 'OasisMembers:meeting' attend_entry.Meeting.id %}">{{ attend_entry.Meeting }}</a><br/>
-  {% endfor %}
+  <table>
+    <tr>
+      <th>Technique</th>
+      <th>Number of Meetings Attended</th>
+    </tr>
+    {% for technique in techniquesNotAttended %}
+    <tr>
+      <td>{{ technique.Name }}</td>
+      <td>0</td>
+    </tr>
+    {% endfor %}
+    {% for technique in techniquesAttended %}
+    <tr>
+      <td>{{ technique.Name }}</td>
+      <td>{{ technique.NumMeetings }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 </p>
 
 {% endblock %}

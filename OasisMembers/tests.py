@@ -65,8 +65,6 @@ class MemberViewTests(django.test.TestCase):
         self.assertContains(response, '2017-07-01 04:58:33+00:00 - Awakening')
         # Check Co-Coordinated meeting
         self.assertContains(response, '2017-07-13 05:38:53+00:00 - Open House')
-        # Check attendeed meeting
-        self.assertContains(response, '2017-07-03 05:05:57+00:00 - Gift to Share')
 
 class MeetingsViewTests(django.test.TestCase):
     fixtures = [ 'testdata.json' ]
