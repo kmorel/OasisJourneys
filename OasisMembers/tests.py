@@ -26,15 +26,15 @@ return names as expected.
         """Test that the AttendancePerTechnique method behaves as expected."""
         member = models.Member.objects.get(pk=1) # Sylvia Brown
         techniqueAttendance = member.AttendancePerTechnique()
-        self.assertEqual(techniqueAttendance.count(), 4)
-        self.assertEqual(
-            techniqueAttendance.get(Name='Gift to Share').NumMeetings, 1)
-        self.assertEqual(
-            techniqueAttendance.get(Name='Testing Waters').NumMeetings, 2)
-        self.assertEqual(
-            techniqueAttendance.get(Name='Focusing Brand').NumMeetings, 1)
-        self.assertEqual(
-            techniqueAttendance.get(Name='Preparing for Dream').NumMeetings, 1)
+        taValues = techniqueAttendance.values()
+        # First value has no meetings
+        self.assertEqual(taValues[0]['NumMeetings'], 0)
+        # Last value is Testing Waters and has 2 meetings
+        numTechniques = techniqueAttendance.count()
+        self.assertEqual(taValues[numTechniques-1]['Name'], 'Testing Waters')
+        self.assertEqual(taValues[numTechniques-1]['NumMeetings'], 2)
+        # Second to last value has one meeting
+        self.assertEqual(taValues[numTechniques-2]['NumMeetings'], 1)
 
 # Views testing classes
 

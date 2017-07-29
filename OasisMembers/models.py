@@ -67,7 +67,13 @@ count of how many meetings of that type were attended."""
             meeting__attendee__Member=self)
         meetingCount = meetingsAttended.annotate(
             NumMeetings=django.db.models.Count('meeting'))
-        return meetingCount.order_by('NumMeetings')
+        techniquesNotAttended = Technique.objects.exclude(
+            Name=meetingCount.values_list('Name'))
+        techniquesNotAttendedCount = techniquesNotAttended.annotate(
+            NumMeetings=django.db.models.Value(0,
+                                               django.db.models.IntegerField()))
+        techniqueUnion = meetingCount.union(techniquesNotAttendedCount)
+        return techniqueUnion.order_by('NumMeetings')
 
 
 @python_2_unicode_compatible
