@@ -1,0 +1,21 @@
+{% extends 'OasisMembers/base-generic.html' %}
+
+{% block title %}Oasis Journeys Techniques{% endblock %}
+
+{% block content %}
+
+<div style="position:absolute; right:20px;">
+  <a href="{% url 'OasisMembers:index' %}">Back to Main Page</a>
+</div>
+
+<h1>Techniques</h1>
+
+<table>
+  {% for technique in technique_list %}
+  <tr>
+    <td><a href="{% url 'OasisMembers:technique' technique.id %}">{{ technique }}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

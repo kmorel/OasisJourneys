@@ -18,6 +18,7 @@ urlpatterns = [
     django.conf.urls.url(r'^meeting/(?P<meeting_id>[0-9]+)/$',
                          views.meeting,
                          name='meeting'),
+    django.conf.urls.url(r'^techniques/$', views.techniques, name='techniques'),
     django.conf.urls.url(r'^technique/(?P<technique_id>[0-9]+)/$',
                          views.technique,
                          name='technique'),

@@ -124,7 +124,22 @@ class MeetingViewTests(django.test.TestCase):
             'OasisMembers:meeting',
             kwargs={'meeting_id':2}))
 
-class MeetingTechniqueTests(django.test.TestCase):
+class TechniquesViewTests(django.test.TestCase):
+    fixtures = [ 'testdata.json' ]
+
+    def test_list_of_techniques(self):
+        """Test the view with a list of techniques."""
+        response = self.client.get(django.urls.reverse('OasisMembers:techniques'))
+        self.assertContains(
+            response,
+            '<a href="/technique/1/">Awakening</a>',
+            html=True)
+        self.assertContains(
+            response,
+            '<title>Oasis Journeys Techniques</title>',
+            html=True)
+
+class TechniqueViewTests(django.test.TestCase):
     fixtures = [ 'testdata.json' ]
 
     def test_technique_detail(self):
