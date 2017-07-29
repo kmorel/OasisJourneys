@@ -24,17 +24,32 @@ return names as expected.
 
     def test_attendance_per_technique(self):
         """Test that the AttendancePerTechnique method behaves as expected."""
-        member = models.Member.objects.get(pk=1) # Sylvia Brown
+        member = models.Member.objects.get(pk=1) # Sylvia Browne
         techniqueAttendance = member.AttendancePerTechnique()
-        taValues = techniqueAttendance.values()
+        taList = list(techniqueAttendance)
         # First value has no meetings
-        self.assertEqual(taValues[0]['NumMeetings'], 0)
+        self.assertEqual(taList[0].NumMeetings, 0)
         # Last value is Testing Waters and has 2 meetings
-        numTechniques = techniqueAttendance.count()
-        self.assertEqual(taValues[numTechniques-1]['Name'], 'Testing Waters')
-        self.assertEqual(taValues[numTechniques-1]['NumMeetings'], 2)
+        self.assertEqual(taList[-1].Name, 'Testing Waters')
+        self.assertEqual(taList[-1].NumMeetings, 2)
         # Second to last value has one meeting
-        self.assertEqual(taValues[numTechniques-2]['NumMeetings'], 1)
+        self.assertEqual(taList[-2].NumMeetings, 1)
+
+class TechniqueModelTests(django.test.TestCase):
+    fixtures = [ 'testdata.json' ]
+
+    def test_member_attendance(self):
+        """Test that the MemberAttendance method behaves as expected."""
+        technique = models.Technique.objects.get(Name='Testing Waters')
+        memberAttendance = technique.MemberAttendance()
+        maList = list(memberAttendance)
+        # First value has no meetings
+        self.assertEqual(maList[0].NumMeetings, 0)
+        # Last value is Sylvia Browne and has 2 meetings
+        self.assertEqual(maList[-1].FullName(), 'Sylvia Browne')
+        self.assertEqual(maList[-1].NumMeetings, 2)
+        # Second to last value has one meeting
+        self.assertEqual(maList[-2].NumMeetings, 1)
 
 # Views testing classes
 

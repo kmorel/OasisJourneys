@@ -5,6 +5,8 @@ from six import python_2_unicode_compatible
 
 import django.db
 
+import itertools
+
 # Create your models here.
 
 
@@ -59,21 +61,28 @@ class Member(django.db.models.Model):
         ordering = ['FirstName', 'LastName']
 
     def AttendancePerTechnique(self):
-        """Returns a django.db.models.QuerySet containing all Techniques for
-meetings the given member has attended. Each Technique in the QuerySet
-is further annotated with a field named NumMeetings that gives a
-count of how many meetings of that type were attended."""
+        """Returns an iterable object containing all Techniques
+for meetings the given member has attended. Each Technique
+in the iterable object is further annotated with a field
+named NumMeetings that gives a count of how many meetings
+of that type were attended."""
         meetingsAttended = Technique.objects.filter(
             meeting__attendee__Member=self)
         meetingCount = meetingsAttended.annotate(
             NumMeetings=django.db.models.Count('meeting'))
+        meetingCountOrdered = meetingCount.order_by('NumMeetings')
         techniquesNotAttended = Technique.objects.exclude(
             Name=meetingCount.values_list('Name'))
         techniquesNotAttendedCount = techniquesNotAttended.annotate(
             NumMeetings=django.db.models.Value(0,
                                                django.db.models.IntegerField()))
-        techniqueUnion = meetingCount.union(techniquesNotAttendedCount)
-        return techniqueUnion.order_by('NumMeetings')
+        return itertools.chain(techniquesNotAttendedCount, meetingCountOrdered)
+
+    # Might be a way to move this to Member.objects
+    @staticmethod
+    def Current():
+        """Returns all current members."""
+        return Member.objects.filter(IsCurrent=True)
 
 
 @python_2_unicode_compatible
@@ -82,6 +91,24 @@ class Technique(django.db.models.Model):
 
     def __str__(self):
         return self.Name
+
+    def MemberAttendance(self):
+        """Returns an iterable object containing all current members.
+Each Member in the iterable object is further annotated with
+a field named NumMeetings that gives a count of how many meetings
+of this technique that member has attended."""
+        currentMembers = Member.Current()
+        meetingsAttended = Member.Current().filter(
+            attendee__Meeting__Technique=self)
+        meetingCount = meetingsAttended.annotate(
+            NumMeetings=django.db.models.Count('attendee'))
+        meetingCountOrdered = meetingCount.order_by('NumMeetings')
+        membersNotAttended = currentMembers.exclude(
+            id__in=meetingCount.values_list('id'))
+        membersNotAttendedCount = membersNotAttended.annotate(
+            NumMeetings=django.db.models.Value(0,
+                                               django.db.models.IntegerField()))
+        return itertools.chain(membersNotAttendedCount, meetingCountOrdered)
 
 
 
