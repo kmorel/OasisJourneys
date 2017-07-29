@@ -72,7 +72,7 @@ of that type were attended."""
             NumMeetings=django.db.models.Count('meeting'))
         meetingCountOrdered = meetingCount.order_by('NumMeetings')
         techniquesNotAttended = Technique.objects.exclude(
-            Name=meetingCount.values_list('Name'))
+            id__in=meetingCount.values_list('id'))
         techniquesNotAttendedCount = techniquesNotAttended.annotate(
             NumMeetings=django.db.models.Value(0,
                                                django.db.models.IntegerField()))

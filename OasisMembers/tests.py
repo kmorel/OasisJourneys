@@ -27,6 +27,7 @@ return names as expected.
         member = models.Member.objects.get(pk=1) # Sylvia Browne
         techniqueAttendance = member.AttendancePerTechnique()
         taList = list(techniqueAttendance)
+        self.assertEqual(len(taList), models.Technique.objects.all().count())
         # First value has no meetings
         self.assertEqual(taList[0].NumMeetings, 0)
         # Last value is Testing Waters and has 2 meetings
@@ -43,6 +44,7 @@ class TechniqueModelTests(django.test.TestCase):
         technique = models.Technique.objects.get(Name='Testing Waters')
         memberAttendance = technique.MemberAttendance()
         maList = list(memberAttendance)
+        self.assertEqual(len(maList), models.Member.Current().count())
         # First value has no meetings
         self.assertEqual(maList[0].NumMeetings, 0)
         # Last value is Sylvia Browne and has 2 meetings
