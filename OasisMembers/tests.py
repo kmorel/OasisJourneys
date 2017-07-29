@@ -91,7 +91,7 @@ class MeetingsViewTests(django.test.TestCase):
         response = self.client.get(django.urls.reverse('OasisMembers:meetings'))
         self.assertContains(
             response,
-            '<a href="/meeting/1">2017-07-01 04:58:33+00:00 - Awakening</a>',
+            '<a href="/meeting/1/">2017-07-01 04:58:33+00:00 - Awakening</a>',
             html=True)
         self.assertContains(
             response,
@@ -124,3 +124,14 @@ class MeetingViewTests(django.test.TestCase):
             'OasisMembers:meeting',
             kwargs={'meeting_id':2}))
 
+class MeetingTechniqueTests(django.test.TestCase):
+    fixtures = [ 'testdata.json' ]
+
+    def test_technique_detail(self):
+        """Test the view with the detail for a single technique."""
+        response = self.client.get(django.urls.reverse(
+            'OasisMembers:technique',
+            kwargs={'technique_id':5}))
+        self.assertContains(response, 'Testing Waters')
+        self.assertContains(response, '<title>Technique Testing Waters')
+        self.assertContains(response, 'Sylvia Browne')

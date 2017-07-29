@@ -74,7 +74,7 @@ Has a spotlight
     </tr>
     {% for technique in member.AttendancePerTechnique %}
     <tr>
-      <td>{{ technique.Name }}</td>
+      <td><a href="{% url 'OasisMembers:technique' technique.id %}">{{ technique.Name }}</a></td>
       <td>{{ technique.NumMeetings }}</td>
     </tr>
     {% endfor %}

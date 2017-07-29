@@ -1,0 +1,27 @@
+{% extends 'OasisMembers/base-generic.html' %}
+
+{% block title%}Technique {{ technique.Name }}{% endblock %}
+
+{% block content %}
+
+<div style="position:absolute; right:20px;">
+  <a href="add/this/when/available">Back to technique list</a>
+</div>
+
+<h1>{{ technique.Name }}</h1>
+
+<table>
+  <tr>
+    <th>Member</th>
+    <th>Number of Meetings Attended</th>
+  </tr>
+  {% for member in technique.MemberAttendance %}
+  <tr>
+    <td><a href="{% url 'OasisMembers:member' member.id %}">{{ member.FullName }}</a></td>
+    <td>{{ member.NumMeetings }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+{% endblock %}

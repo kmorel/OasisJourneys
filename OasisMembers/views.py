@@ -51,3 +51,9 @@ def meeting(request, meeting_id):
                                    'OasisMembers/meeting-detail.html',
                                    {'meeting':meeting})
 
+def technique(request, technique_id):
+    technique = django.shortcuts.get_object_or_404(models.Technique,
+                                                   pk=technique_id)
+    return django.shortcuts.render(request,
+                                   'OasisMembers/technique-detail.html',
+                                   {'technique':technique})
