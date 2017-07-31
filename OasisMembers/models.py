@@ -138,7 +138,10 @@ class Meeting(django.db.models.Model):
     Notes = django.db.models.TextField(blank=True)
 
     def __str__(self):
-        return str(self.Time) + ' - ' + str(self.Technique)
+        import django.utils.timezone
+        return str(self.Time.astimezone(
+                django.utils.timezone.get_current_timezone())) + \
+            ' - ' + str(self.Technique)
 
 
 @python_2_unicode_compatible
