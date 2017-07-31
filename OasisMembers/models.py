@@ -58,7 +58,7 @@ class Member(django.db.models.Model):
         return self.FullName()
 
     class Meta:
-        ordering = ['FirstName', 'LastName']
+        ordering = [ 'FirstName', 'LastName' ]
 
     def AttendancePerTechnique(self):
         """Returns an iterable object containing all Techniques
@@ -91,6 +91,9 @@ class Technique(django.db.models.Model):
 
     def __str__(self):
         return self.Name
+
+    class Meta:
+        ordering = [ 'Name' ]
 
     def MemberAttendance(self):
         """Returns an iterable object containing all current members.
