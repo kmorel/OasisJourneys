@@ -12,5 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "OasisJourneys.settings")
+os.environ.setdefault('OASIS_JOURNEYS_RELEASE', '1')
 
 application = get_wsgi_application()

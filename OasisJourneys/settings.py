@@ -10,20 +10,31 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+from __future__ import print_function
+
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
+# Initial release mode settings. Further protection may be needed.
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 's0qr(^48u+=6bh=2sjb1nf&--$nn2!xz&nblo(tlam!v6+#s*8'
+# Determine if we are in debug or relase mode
+if 'OASIS_JOURNEYS_RELEASE' in os.environ:
+    DEBUG = False
+    print('Release Mode', file=sys.stderr)
+else:
+    DEBUG = True
+    print('Debug Mode', file=sys.stderr)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# SECURITY WARNING: keep the secret key used in production secret!
+if DEBUG:
+    SECRET_KEY = 's0qr(^48u+=6bh=2sjb1nf&--$nn2!xz&nblo(tlam!v6+#s*8'
+else:
+    with open(BASE_DIR + '/secret_key.txt') as fd:
+        SECRET_KEY = fd.read().strip()
 
 ALLOWED_HOSTS = [
     '34.212.255.192',
