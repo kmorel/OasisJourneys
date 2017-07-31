@@ -5,6 +5,14 @@ import django.contrib
 
 import models
 
+class MemberAdmin(django.contrib.admin.ModelAdmin):
+    list_display = [
+        'FullName',
+        'IsCurrent',
+        'HasSpotlight',
+    ]
+    list_filter = [ 'IsCurrent' ]
+
 class AttendeeInline(django.contrib.admin.StackedInline):
     model = models.Attendee
 
@@ -20,7 +28,7 @@ class MeetingAdmin(django.contrib.admin.ModelAdmin):
     inlines = [AttendeeInline]
     list_filter = ['Time', 'Technique']
 
-django.contrib.admin.site.register(models.Member)
+django.contrib.admin.site.register(models.Member, MemberAdmin)
 django.contrib.admin.site.register(models.Technique)
 django.contrib.admin.site.register(models.Meeting, MeetingAdmin)
 
