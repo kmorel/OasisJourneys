@@ -46,7 +46,7 @@
   <!-- Load CSS -->
   <link href="{% static 'OasisMembers/css/oasis.css' %}"
 	rel="stylesheet">
-  <link href="{% static 'OasisMembers/css/simple-sidebar.css' %}"
+  <link href="{% static 'OasisMembers/css/topnav.css' %}"
 	rel="stylesheet">
 </head>
 
@@ -54,17 +54,16 @@
 
 <div id="body-wrapper">
 
-<div id="sidebar-wrapper">
-  <ul class="sidebar-nav">
-    <li class="sidebar-brand"><a href="{% url 'OasisMembers:index' %}">Home</a></li>
+<!--<div id="navbar-wrapper">-->
+<ul class="navbar">
+    <li><img src="{% static 'OasisMembers/images/icons/favicon-32x32.png' %}"></li>
+    <li><a href="{% url 'OasisMembers:index' %}">Home</a></li>
     <li><a href="{% url 'OasisMembers:members' %}">Members</a></li>
     <li><a href="{% url 'OasisMembers:meetings' %}">Meetings</a></li>
     <li><a href="{% url 'OasisMembers:techniques' %}">Techniques</a></li>
-    <li/>
-    <li/>
-    <li><a href="{% url 'admin:index' %}">Admin</a></li>
+    <li class="navbar-right"><a href="{% url 'admin:index' %}">Admin</a></li>
   </ul>
-</div>
+<!--</div>-->
 
 <div id="page-content-wrapper">
 
