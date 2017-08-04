@@ -1,9 +1,18 @@
 import django.conf.urls
+import django.contrib.auth.views
 import views
 
 app_name = 'OasisMembers'
 urlpatterns = [
     django.conf.urls.url(r'^$', views.index, name='index'),
+    django.conf.urls.url(r'^login/$',
+                         django.contrib.auth.views.login,
+                         {'template_name':'OasisMembers/login.html'},
+                         name='login'),
+    django.conf.urls.url(r'^logout/$',
+                         django.contrib.auth.views.logout,
+                         {'next_page': 'OasisMembers:index'},
+                         name='logout'),
     django.conf.urls.url(r'^members/$', views.members, name='members'),
     django.conf.urls.url(r'^member/(?P<member_id>[0-9]+)/$',
                          views.member,
