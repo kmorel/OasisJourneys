@@ -79,9 +79,9 @@ class MemberViewTests(django.test.TestCase):
                             '<title>Oasis Member Sylvia Browne</title>',
                             html=True)
         # Check Coordinated meeting
-        self.assertContains(response, '2017-07-01 04:58:33+00:00 - Awakening')
+        self.assertContains(response, ' - Awakening')
         # Check Co-Coordinated meeting
-        self.assertContains(response, '2017-07-13 05:38:53+00:00 - Open House')
+        self.assertContains(response, ' - Open House')
 
 class MeetingsViewTests(django.test.TestCase):
     fixtures = [ 'testdata.json' ]
@@ -91,8 +91,7 @@ class MeetingsViewTests(django.test.TestCase):
         response = self.client.get(django.urls.reverse('OasisMembers:meetings'))
         self.assertContains(
             response,
-            '<a href="/meeting/1/">2017-07-01 04:58:33+00:00 - Awakening</a>',
-            html=True)
+            '<a href="/meeting/1/">2017-06-30')
         self.assertContains(
             response,
             '<title>Oasis Journeys Meetings</title>',
