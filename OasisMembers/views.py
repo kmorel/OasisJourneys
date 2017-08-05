@@ -63,3 +63,21 @@ def technique(request, technique_id):
     return django.shortcuts.render(request,
                                    'OasisMembers/technique-detail.html',
                                    {'technique':technique})
+
+# The login/logout views are those provided by django.contrib.auth.views,
+# so we do not need to provide them here. However, once completed these
+# views just redirect somewhere with no indication of what happened. Attach
+# some receivers to the login/logout messages here so that a message is
+# displayed on whatever page the user lands at.
+
+import django.contrib.auth.signals
+import django.dispatch
+import django.contrib.messages
+
+@django.dispatch.receiver(django.contrib.auth.signals.user_logged_in)
+def on_user_logged_in(sender, request, **kwargs):
+    django.contrib.messages.info(request, 'Logged in ' + str(request.user) + '.')
+
+@django.dispatch.receiver(django.contrib.auth.signals.user_logged_out)
+def on_user_logged_out(sender, request, **kwargs):
+    django.contrib.messages.info(request, 'Logged out.')

@@ -62,10 +62,19 @@
     <li><a href="{% url 'OasisMembers:meetings' %}">Meetings</a></li>
     <li><a href="{% url 'OasisMembers:techniques' %}">Techniques</a></li>
     <li class="navbar-right"><a href="{% url 'admin:index' %}">Admin</a></li>
+    <li class="navbar-right"><a href="#">{{ user }}</a></li>
   </ul>
 <!--</div>-->
 
 <div id="page-content-wrapper">
+
+{% if messages %}
+{% for message in messages %}
+<p{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+  {{ message }}
+</p>
+{% endfor %}
+{% endif %}
 
 {% block content %}{% endblock %}
 
