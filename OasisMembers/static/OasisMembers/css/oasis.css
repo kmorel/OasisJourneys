@@ -255,3 +255,29 @@ caption {
     color: red;
     font-weight: bold;
 }
+
+.message {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+}
+
+.message.info {
+    background-color: #cccccc;
+}
+
+.message.success {
+    background-color: #ccff99;
+}
+
+.message.warning {
+    background-color: #ffff66;
+}
+
+.message.error {
+    background-color: #ff9999;
+    font-weight: bold;
+}
