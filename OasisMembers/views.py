@@ -3,6 +3,9 @@ from __future__ import unicode_literals
 
 # Create your views here.
 
+import django.contrib.messages
+import django.contrib.auth
+import django.contrib.auth.forms
 import django.http
 import django.shortcuts
 import django.urls
@@ -63,6 +66,25 @@ def technique(request, technique_id):
     return django.shortcuts.render(request,
                                    'OasisMembers/technique-detail.html',
                                    {'technique':technique})
+
+def user_settings(request):
+    if request.method == 'POST':
+        change_passwd_form = django.contrib.auth.forms.PasswordChangeForm(
+            request.user, request.POST)
+        if change_passwd_form.is_valid():
+            user = change_passwd_form.save()
+            django.contrib.auth.update_session_auth_hash(request, user)
+            django.contrib.messages.success(
+                request, 'Your password was successfully updated.')
+            return django.shortcuts.redirect('OasisMembers:user-settings')
+        else:
+            django.contrib.messages.error(request, 'Error changing password.')
+    else:
+        change_passwd_form = django.contrib.auth.forms.PasswordChangeForm(
+            request.user)
+    return django.shortcuts.render(request,
+                                   'OasisMembers/user-settings.html',
+                                   {'change_passwd_form':change_passwd_form})
 
 # The login/logout views are those provided by django.contrib.auth.views,
 # so we do not need to provide them here. However, once completed these

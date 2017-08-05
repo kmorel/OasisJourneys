@@ -31,4 +31,5 @@ urlpatterns = [
     django.conf.urls.url(r'^technique/(?P<technique_id>[0-9]+)/$',
                          views.technique,
                          name='technique'),
+    django.conf.urls.url(r'^user-settings/$', views.user_settings, name='user-settings'),
 ]

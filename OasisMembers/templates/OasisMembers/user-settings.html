@@ -1,0 +1,27 @@
+{% extends 'OasisMembers/base-generic.html' %}
+
+{% block title %}{{ user }}{% endblock %}
+
+{% block content %}
+
+{% if user.first_name or user.last_name %}
+<h1>User {{ user.first_name }} {{ user.last_name }} ({{ user }})</h1>
+{% else %}
+<h1>User {{ user }}</h1>
+{% endif %}
+
+<h3>Logout</h3>
+
+<a href="{% url 'OasisMembers:logout' %}">Click here</a> to log out.
+
+<h3>Change Password</h3>
+
+<form method="post">
+  {% csrf_token %}
+  <table class="setpasswordtable">
+    {{ change_passwd_form }}
+  </table>
+  <button type="submit">Change Password</button>
+</form>
+
+{% endblock %}

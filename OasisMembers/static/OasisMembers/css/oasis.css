@@ -247,73 +247,11 @@ caption {
 }
 
 /* Custom classes. */
-.leftSubCurrent {
-background-color: #baa588 !important;
-color: #ffffff!important;
-font-weight: bold;
-}
-.imageCredit {
-	font-size: x-small;
-	text-align: center;
-}
-.descriptionItem {
-	font-weight: bold;
-	margin-right: 5px;
-}
-.pubTitle {
-	font-weight: bolder;
-	font-size: 110%;
-}
-.pubDescription {
-	font-size: 95%;
-	margin-top: 10px;
-	margin-right: 20px;
-	margin-bottom: 10px;
-	margin-left: 20px;
-}
-.pubImage {
-	margin-left:    0px;
-	margin-right:   0px;
-	margin-top:     0px;
-	margin-bottom:  0px;
-	padding:        0px;
-	border:         0px;
-	float:          right;
-}
-.constrainImage {
-	overflow: auto;
-}
-.cppClass {
-	font-family: Courier New, Courier, monospace;
-}
-.imgDropLeft {
-	float: left;
-	padding-top: 0px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-	padding-left: 0px;
+.setpasswordtable th {
+    vertical-align: top;
 }
 
-.profilePic {
-    float: left;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    position: relative;
-    margin-left: 15px;
-    border-radius: 20px;
-    margin-top: -30px;
-    background-color: #FFFFFF;
-    margin-right: 10px;
-}
-
-.profilePicContact {
-    float: right;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    position: relative;
-    border-radius: 20px;
+.errorlist {
+    color: red;
+    font-weight: bold;
 }
