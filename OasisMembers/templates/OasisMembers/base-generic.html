@@ -62,7 +62,11 @@
     <li><a href="{% url 'OasisMembers:meetings' %}">Meetings</a></li>
     <li><a href="{% url 'OasisMembers:techniques' %}">Techniques</a></li>
     <li class="navbar-right"><a href="{% url 'admin:index' %}">Admin</a></li>
-    <li class="navbar-right"><a href="#">{{ user }}</a></li>
+    {% if user.is_authenticated %}
+    <li class="navbar-right"><a href="{% url 'OasisMembers:user-settings' %}">{{ user }}</a></li>
+    {% else %}
+    <li class="navbar-right"><a href="{% url 'OasisMembers:login' %}">Login</a></li>
+    {% endif %}
   </ul>
 <!--</div>-->
 
