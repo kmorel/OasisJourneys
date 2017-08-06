@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from __future__ import print_function
 
+import django.contrib.auth.models
 import django.test
 import django.urls
 import django.utils
@@ -10,9 +11,22 @@ import django.utils
 
 import models
 
-class MemberModelTests(django.test.TestCase):
+class OasisMembersBaseTest(django.test.TestCase):
     fixtures = [ 'testdata.json' ]
 
+    def setUp(self):
+        self.factory = django.test.RequestFactory()
+        self.user = \
+            django.contrib.auth.models.User.objects.create_user(
+                username='jdoe', email='jdoe@nowhere.com', password='secret')
+
+    def get_request(self, url):
+        request = self.factory.get(url)
+        request.user = self.user
+        return request
+
+
+class MemberModelTests(OasisMembersBaseTest):
     def test_full_name_methods(self):
         """Test that NameFirstLast, NameLastFirst, and FullName methods
 return names as expected.
@@ -36,9 +50,7 @@ return names as expected.
         # Second to last value has one meeting
         self.assertEqual(taList[-2].NumMeetings, 1)
 
-class TechniqueModelTests(django.test.TestCase):
-    fixtures = [ 'testdata.json' ]
-
+class TechniqueModelTests(OasisMembersBaseTest):
     def test_member_attendance(self):
         """Test that the MemberAttendance method behaves as expected."""
         technique = models.Technique.objects.get(Name='Testing Waters')
@@ -57,23 +69,20 @@ class TechniqueModelTests(django.test.TestCase):
 
 import views
 
-class MembersViewTests(django.test.TestCase):
-    fixtures = [ 'testdata.json' ]
-
+class MembersViewTests(OasisMembersBaseTest):
     def test_list_of_members(self):
         """Test the view with a list of members."""
-        response = self.client.get(django.urls.reverse('OasisMembers:members'))
+        request = self.get_request(django.urls.reverse('OasisMembers:members'))
+        response = views.members(request)
         self.assertContains(response, 'Colin Fry')
         self.assertContains(response, '<title>Oasis Journeys Members</title>')
 
-class MemberViewTests(django.test.TestCase):
-    fixtures = [ 'testdata.json' ]
-
+class MemberViewTests(OasisMembersBaseTest):
     def test_member_detail(self):
         """Test the view with the detail for a single member."""
-        response = self.client.get(django.urls.reverse(
-            'OasisMembers:member',
-            kwargs={'member_id':1}))
+        request = self.get_request(django.urls.reverse('OasisMembers:member',
+                                                       kwargs={'member_id':1}))
+        response = views.member(request, member_id=1)
         self.assertContains(response, '<h1>Sylvia Browne</h1>', html=True)
         self.assertContains(response,
                             '<title>Oasis Member Sylvia Browne</title>',
@@ -83,12 +92,11 @@ class MemberViewTests(django.test.TestCase):
         # Check Co-Coordinated meeting
         self.assertContains(response, ' - Open House')
 
-class MeetingsViewTests(django.test.TestCase):
-    fixtures = [ 'testdata.json' ]
-
+class MeetingsViewTests(OasisMembersBaseTest):
     def test_list_of_meetings(self):
         """Test the view with a list of meetings."""
-        response = self.client.get(django.urls.reverse('OasisMembers:meetings'))
+        request = self.get_request(django.urls.reverse('OasisMembers:meetings'))
+        response = views.meetings(request)
         self.assertContains(
             response,
             '<a href="/meeting/1/">2017-06-30')
@@ -97,14 +105,12 @@ class MeetingsViewTests(django.test.TestCase):
             '<title>Oasis Journeys Meetings</title>',
             html=True)
 
-class MeetingViewTests(django.test.TestCase):
-    fixtures = [ 'testdata.json' ]
-
+class MeetingViewTests(OasisMembersBaseTest):
     def test_meeting_detail(self):
         """Test the view with the detail for a single meeting."""
-        response = self.client.get(django.urls.reverse(
-            'OasisMembers:meeting',
-            kwargs={'meeting_id':6}))
+        request = self.get_request(django.urls.reverse('OasisMembers:meeting',
+                                                       kwargs={'meeting_id':6}))
+        response = views.meeting(request, meeting_id=6)
         self.assertContains(response, 'Meeting @ July 5, 2017')
         self.assertContains(response, '<title>Oasis Meeting @')
         # Coordinator should be there
@@ -119,16 +125,16 @@ class MeetingViewTests(django.test.TestCase):
 
     def test_no_coordinators(self):
         """Test a view that has no coordinator or cocoordinator."""
-        response = self.client.get(django.urls.reverse(
-            'OasisMembers:meeting',
-            kwargs={'meeting_id':2}))
+        request = self.get_request(django.urls.reverse('OasisMembers:meeting',
+                                                       kwargs={'meeting_id':2}))
+        response = views.meeting(request, meeting_id=2)
 
-class TechniquesViewTests(django.test.TestCase):
-    fixtures = [ 'testdata.json' ]
-
+class TechniquesViewTests(OasisMembersBaseTest):
     def test_list_of_techniques(self):
         """Test the view with a list of techniques."""
-        response = self.client.get(django.urls.reverse('OasisMembers:techniques'))
+        request = self.get_request(
+            django.urls.reverse('OasisMembers:techniques'))
+        response = views.techniques(request)
         self.assertContains(
             response,
             '<a href="/technique/1/">Awakening</a>',
@@ -138,14 +144,13 @@ class TechniquesViewTests(django.test.TestCase):
             '<title>Oasis Journeys Techniques</title>',
             html=True)
 
-class TechniqueViewTests(django.test.TestCase):
-    fixtures = [ 'testdata.json' ]
-
+class TechniqueViewTests(OasisMembersBaseTest):
     def test_technique_detail(self):
         """Test the view with the detail for a single technique."""
-        response = self.client.get(django.urls.reverse(
+        request = self.get_request(django.urls.reverse(
             'OasisMembers:technique',
             kwargs={'technique_id':5}))
+        response = views.technique(request, technique_id=5)
         self.assertContains(response, 'Testing Waters')
         self.assertContains(response, '<title>Technique Testing Waters')
         self.assertContains(response, 'Sylvia Browne')
