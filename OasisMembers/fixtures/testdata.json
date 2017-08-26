@@ -523,8 +523,8 @@
   "fields": {
     "Time": "2017-07-01T04:58:33Z",
     "Technique": 1,
-    "Coordinator": 1,
-    "CoCoordinator": 2,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": "\"What is going on?\" asked Sylvia.\r\n\"I don't know. Nobody does,\" responded Linda."
   }
 },
@@ -545,7 +545,7 @@
   "fields": {
     "Time": "2017-07-03T05:05:57Z",
     "Technique": 3,
-    "Coordinator": 17,
+    "Coordinator": null,
     "CoCoordinator": null,
     "Notes": ""
   }
@@ -556,8 +556,8 @@
   "fields": {
     "Time": "2017-07-04T05:06:52Z",
     "Technique": 4,
-    "Coordinator": 12,
-    "CoCoordinator": 4,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -567,8 +567,8 @@
   "fields": {
     "Time": "2017-07-05T05:07:15Z",
     "Technique": 5,
-    "Coordinator": 13,
-    "CoCoordinator": 20,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -578,8 +578,8 @@
   "fields": {
     "Time": "2017-07-06T05:33:37Z",
     "Technique": 5,
-    "Coordinator": 20,
-    "CoCoordinator": 17,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -589,8 +589,8 @@
   "fields": {
     "Time": "2017-07-07T05:34:21Z",
     "Technique": 6,
-    "Coordinator": 14,
-    "CoCoordinator": 16,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -600,8 +600,8 @@
   "fields": {
     "Time": "2017-07-09T05:34:45Z",
     "Technique": 7,
-    "Coordinator": 2,
-    "CoCoordinator": 3,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -611,8 +611,8 @@
   "fields": {
     "Time": "2017-07-10T05:37:20Z",
     "Technique": 8,
-    "Coordinator": 19,
-    "CoCoordinator": 3,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -622,8 +622,8 @@
   "fields": {
     "Time": "2017-07-11T05:37:48Z",
     "Technique": 9,
-    "Coordinator": 13,
-    "CoCoordinator": 16,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -633,8 +633,8 @@
   "fields": {
     "Time": "2017-07-12T05:38:22Z",
     "Technique": 10,
-    "Coordinator": 3,
-    "CoCoordinator": 6,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -644,8 +644,8 @@
   "fields": {
     "Time": "2017-07-13T05:38:53Z",
     "Technique": 11,
-    "Coordinator": 11,
-    "CoCoordinator": 1,
+    "Coordinator": null,
+    "CoCoordinator": null,
     "Notes": ""
   }
 },
@@ -655,6 +655,7 @@
   "fields": {
     "Meeting": 1,
     "Member": 3,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -664,6 +665,7 @@
   "fields": {
     "Meeting": 1,
     "Member": 4,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -673,6 +675,7 @@
   "fields": {
     "Meeting": 1,
     "Member": 5,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -682,6 +685,7 @@
   "fields": {
     "Meeting": 1,
     "Member": 6,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -691,6 +695,7 @@
   "fields": {
     "Meeting": 2,
     "Member": 4,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -700,6 +705,7 @@
   "fields": {
     "Meeting": 2,
     "Member": 10,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -709,6 +715,7 @@
   "fields": {
     "Meeting": 3,
     "Member": 4,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -718,6 +725,7 @@
   "fields": {
     "Meeting": 3,
     "Member": 1,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -727,6 +735,7 @@
   "fields": {
     "Meeting": 3,
     "Member": 19,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -736,6 +745,7 @@
   "fields": {
     "Meeting": 3,
     "Member": 11,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -745,6 +755,7 @@
   "fields": {
     "Meeting": 3,
     "Member": 9,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -754,6 +765,7 @@
   "fields": {
     "Meeting": 3,
     "Member": 18,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -763,6 +775,7 @@
   "fields": {
     "Meeting": 4,
     "Member": 9,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -772,6 +785,7 @@
   "fields": {
     "Meeting": 4,
     "Member": 14,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -781,6 +795,7 @@
   "fields": {
     "Meeting": 4,
     "Member": 18,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -790,6 +805,7 @@
   "fields": {
     "Meeting": 5,
     "Member": 8,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -799,6 +815,7 @@
   "fields": {
     "Meeting": 5,
     "Member": 3,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -808,6 +825,7 @@
   "fields": {
     "Meeting": 5,
     "Member": 2,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -817,6 +835,7 @@
   "fields": {
     "Meeting": 5,
     "Member": 14,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -826,6 +845,7 @@
   "fields": {
     "Meeting": 5,
     "Member": 17,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -835,6 +855,7 @@
   "fields": {
     "Meeting": 6,
     "Member": 18,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -844,6 +865,7 @@
   "fields": {
     "Meeting": 6,
     "Member": 11,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -853,6 +875,7 @@
   "fields": {
     "Meeting": 6,
     "Member": 9,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -862,6 +885,7 @@
   "fields": {
     "Meeting": 6,
     "Member": 5,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -871,6 +895,7 @@
   "fields": {
     "Meeting": 7,
     "Member": 6,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -880,6 +905,7 @@
   "fields": {
     "Meeting": 7,
     "Member": 7,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -889,6 +915,7 @@
   "fields": {
     "Meeting": 7,
     "Member": 19,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -898,6 +925,7 @@
   "fields": {
     "Meeting": 8,
     "Member": 10,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -907,6 +935,7 @@
   "fields": {
     "Meeting": 8,
     "Member": 16,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -916,6 +945,7 @@
   "fields": {
     "Meeting": 8,
     "Member": 17,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -925,6 +955,7 @@
   "fields": {
     "Meeting": 9,
     "Member": 5,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -934,6 +965,7 @@
   "fields": {
     "Meeting": 9,
     "Member": 1,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -943,6 +975,7 @@
   "fields": {
     "Meeting": 9,
     "Member": 9,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -952,6 +985,7 @@
   "fields": {
     "Meeting": 10,
     "Member": 12,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -961,6 +995,7 @@
   "fields": {
     "Meeting": 10,
     "Member": 4,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -970,6 +1005,7 @@
   "fields": {
     "Meeting": 10,
     "Member": 20,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -979,6 +1015,7 @@
   "fields": {
     "Meeting": 10,
     "Member": 3,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -988,6 +1025,7 @@
   "fields": {
     "Meeting": 11,
     "Member": 15,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -997,6 +1035,7 @@
   "fields": {
     "Meeting": 11,
     "Member": 1,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1006,6 +1045,7 @@
   "fields": {
     "Meeting": 11,
     "Member": 18,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1015,6 +1055,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 7,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1024,6 +1065,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 16,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1033,6 +1075,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 4,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1042,6 +1085,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 10,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1051,6 +1095,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 6,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1060,6 +1105,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 18,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1069,6 +1115,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 9,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1078,6 +1125,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 2,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1087,6 +1135,7 @@
   "fields": {
     "Meeting": 12,
     "Member": 14,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1096,6 +1145,7 @@
   "fields": {
     "Meeting": 6,
     "Member": 1,
+    "IsCoordinator": false,
     "Notes": ""
   }
 },
@@ -1105,6 +1155,217 @@
   "fields": {
     "Meeting": 5,
     "Member": 1,
+    "IsCoordinator": false,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 52,
+  "fields": {
+    "Meeting": 1,
+    "Member": 1,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 53,
+  "fields": {
+    "Meeting": 1,
+    "Member": 2,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 54,
+  "fields": {
+    "Meeting": 3,
+    "Member": 17,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 55,
+  "fields": {
+    "Meeting": 4,
+    "Member": 12,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 56,
+  "fields": {
+    "Meeting": 4,
+    "Member": 4,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 57,
+  "fields": {
+    "Meeting": 5,
+    "Member": 13,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 58,
+  "fields": {
+    "Meeting": 5,
+    "Member": 20,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 59,
+  "fields": {
+    "Meeting": 6,
+    "Member": 20,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 60,
+  "fields": {
+    "Meeting": 6,
+    "Member": 17,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 61,
+  "fields": {
+    "Meeting": 7,
+    "Member": 14,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 62,
+  "fields": {
+    "Meeting": 7,
+    "Member": 16,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 63,
+  "fields": {
+    "Meeting": 8,
+    "Member": 2,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 64,
+  "fields": {
+    "Meeting": 8,
+    "Member": 3,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 65,
+  "fields": {
+    "Meeting": 9,
+    "Member": 19,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 66,
+  "fields": {
+    "Meeting": 9,
+    "Member": 3,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 67,
+  "fields": {
+    "Meeting": 10,
+    "Member": 13,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 68,
+  "fields": {
+    "Meeting": 10,
+    "Member": 16,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 69,
+  "fields": {
+    "Meeting": 11,
+    "Member": 3,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 70,
+  "fields": {
+    "Meeting": 11,
+    "Member": 6,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 71,
+  "fields": {
+    "Meeting": 12,
+    "Member": 11,
+    "IsCoordinator": true,
+    "Notes": ""
+  }
+},
+{
+  "model": "OasisMembers.attendee",
+  "pk": 72,
+  "fields": {
+    "Meeting": 12,
+    "Member": 1,
+    "IsCoordinator": true,
     "Notes": ""
   }
 }
