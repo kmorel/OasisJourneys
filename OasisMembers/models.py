@@ -153,6 +153,7 @@ class Attendee(django.db.models.Model):
         Member,
         on_delete = django.db.models.CASCADE,
         limit_choices_to={'IsCurrent': True})
+    IsCoordinator = django.db.models.BooleanField('Coordinator', default=False)
     Notes = django.db.models.TextField(blank=True)
 
     def __str__(self):
