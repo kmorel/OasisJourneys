@@ -56,15 +56,8 @@ Has a spotlight
 
 <p>
   <strong>Meetings Coordinated:</strong><br/>
-  {% for meeting in member.MeetingsCoordinated.filter %}
-  <a href="{% url 'OasisMembers:meeting' meeting.id %}">{{ meeting }}</a><br/>
-  {% endfor %}
-</p>
-
-<p>
-  <strong>Meetings Co-Coordinated:</strong><br/>
-  {% for meeting in member.MeetingsCoCoordinated.filter %}
-  <a href="{% url 'OasisMembers:meeting' meeting.id %}">{{ meeting }}</a><br/>
+  {% for attendee in coordinated_attendance %}
+  <a href="{% url 'OasisMembers:meeting' attendee.Meeting.id %}">{{ attendee.Meeting }}</a><br/>
   {% endfor %}
 </p>
 

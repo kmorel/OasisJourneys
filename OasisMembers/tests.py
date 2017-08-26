@@ -59,11 +59,15 @@ class TechniqueModelTests(OasisMembersBaseTest):
         self.assertEqual(len(maList), models.Member.Current().count())
         # First value has no meetings
         self.assertEqual(maList[0].NumMeetings, 0)
-        # Last value is Sylvia Browne and has 2 meetings
-        self.assertEqual(maList[-1].FullName(), 'Sylvia Browne')
+        # Last value is Thomas Williams and
+        # has 2 meetings
+        self.assertEqual(maList[-1].FullName(), 'Thomas Williams')
         self.assertEqual(maList[-1].NumMeetings, 2)
-        # Second to last value has one meeting
-        self.assertEqual(maList[-2].NumMeetings, 1)
+        # Second and third to last also have 2 meetings
+        self.assertEqual(maList[-2].NumMeetings, 2)
+        self.assertEqual(maList[-3].NumMeetings, 2)
+        # Fourth to last value has one meeting
+        self.assertEqual(maList[-4].NumMeetings, 1)
 
 # Views testing classes
 

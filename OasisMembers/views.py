@@ -27,9 +27,15 @@ def members(request):
 @django.contrib.auth.decorators.login_required
 def member(request, member_id):
     member = django.shortcuts.get_object_or_404(models.Member, pk=member_id)
+    coordinated_attendance = member.attendee_set.filter(
+        IsCoordinator__exact=True)
+    context = {
+        'member': member,
+        'coordinated_attendance': coordinated_attendance,
+    }
     return django.shortcuts.render(request,
                                    'OasisMembers/member-detail.html',
-                                   {'member':member})
+                                   context)
 
 @django.contrib.auth.decorators.login_required
 def member_notes_edit(request, member_id):
@@ -57,9 +63,15 @@ def meetings(request):
 @django.contrib.auth.decorators.login_required
 def meeting(request, meeting_id):
     meeting = django.shortcuts.get_object_or_404(models.Meeting, pk=meeting_id)
+    coordinator_attendance = meeting.attendee_set.filter(
+        IsCoordinator__exact=True)
+    context = {
+        'meeting': meeting,
+        'coordinator_attendance': coordinator_attendance,
+    }
     return django.shortcuts.render(request,
                                    'OasisMembers/meeting-detail.html',
-                                   {'meeting':meeting})
+                                   context)
 
 @django.contrib.auth.decorators.login_required
 def techniques(request):

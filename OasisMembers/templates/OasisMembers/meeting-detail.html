@@ -14,18 +14,15 @@
 
 <p>
 <strong>Technique:</strong> {{ meeting.Technique }} <br/>
-<strong>Coordinator:</strong>
-{% if meeting.Coordinator %}
-<a href="{% url 'OasisMembers:member' meeting.Coordinator.id %}">{{ meeting.Coordinator }}</a><br/>
+<strong>Coordinators:</strong>
+{% if coordinator_attendance.first %}
+{% for attendee in coordinator_attendance %}
+<a href="{% url 'OasisMembers:member' attendee.Member.id %}">{{ attendee.Member }}</a> &nbsp;
+{% endfor %}
 {% else %}
-<em>no coordinator</em> <br/>
+<em>no coordinators</em>
 {% endif %}
-<strong>Co-Coordinator:</strong>
-{% if meeting.CoCoordinator %}
-<a href="{% url 'OasisMembers:member' meeting.CoCoordinator.id %}">{{ meeting.CoCoordinator }}</a><br/>
-{% else %}
-<em>no co-coordinator</em> <br/>
-{% endif %}
+<br/>
 </p>
 
 <p>
