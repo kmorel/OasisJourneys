@@ -20,8 +20,6 @@ class MeetingAdmin(django.contrib.admin.ModelAdmin):
     fields = [
         'Time',
         'Technique',
-        'Coordinator',
-        'CoCoordinator',
         'Notes',
     ]
     date_hierarchy = 'Time'
