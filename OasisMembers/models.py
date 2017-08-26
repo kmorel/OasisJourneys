@@ -121,20 +121,6 @@ class Meeting(django.db.models.Model):
     Technique = django.db.models.ForeignKey(
         Technique,
         on_delete=django.db.models.CASCADE)
-    Coordinator = django.db.models.ForeignKey(
-        Member,
-        related_name='MeetingsCoordinated',
-        on_delete=django.db.models.SET_NULL,
-        limit_choices_to={'IsCurrent': True},
-        null=True,
-        blank=True)
-    CoCoordinator = django.db.models.ForeignKey(
-        Member,
-        related_name='MeetingsCoCoordinated',
-        on_delete=django.db.models.SET_NULL,
-        limit_choices_to={'IsCurrent': True},
-        null=True,
-        blank=True)
     Notes = django.db.models.TextField(blank=True)
 
     def __str__(self):
